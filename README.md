@@ -38,8 +38,8 @@ For an optimal student experience, we recommend the following hardware configura
 You’ll also need the following software installed in advance:
 * Operating System: Windows 8 or higher(64-bit version)
 * Browser: Google Chrome or Mozilla Firefox (latest updates installed)
-* Mist (https://github.com/ethereum/mist/releases/)
-* Truffle (http://truffleframework.com/)
+* [Mist](https://github.com/ethereum/mist/releases/)
+* [Truffle](http://truffleframework.com/)
 Access to installation instructions can be provided separately to course material for large training centers and organizations. All source code is publicly available on GitHub and fully referenced within the training material.
 
 
