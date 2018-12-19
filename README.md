@@ -1,42 +1,47 @@
-[![GitHub issues](https://img.shields.io/github/issues/TrainingByPackt/Beginning-Jenkins.svg)](https://github.com/TrainingByPackt/Beginning-Jenkins/issues)
-[![GitHub forks](https://img.shields.io/github/forks/TrainingByPackt/Beginning-Jenkins.svg)](https://github.com/TrainingByPackt/Beginning-Jenkins/network)
-[![GitHub stars](https://img.shields.io/github/stars/TrainingByPackt/Beginning-Jenkins.svg)](https://github.com/TrainingByPackt/Beginning-Jenkins/stargazers)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/TrainingByPackt/Beginning-Jenkins/pulls)
+[![GitHub issues](https://img.shields.io/github/issues/TrainingByPackt/Introduction-to-Blockchain-and-Ethereum-eLearning.svg)](https://github.com/TrainingByPackt/Introduction-to-Blockchain-and-Ethereum-eLearning/issues)
+[![GitHub forks](https://img.shields.io/github/forks/TrainingByPackt/Introduction-to-Blockchain-and-Ethereum-eLearning.svg)](https://github.com/TrainingByPackt/Introduction-to-Blockchain-and-Ethereum-eLearning/network)
+[![GitHub stars](https://img.shields.io/github/stars/TrainingByPackt/Introduction-to-Blockchain-and-Ethereum-eLearning.svg)](https://github.com/TrainingByPackt/Introduction-to-Blockchain-and-Ethereum-eLearning/stargazers)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/TrainingByPackt/Introduction-to-Blockchain-and-Ethereum-eLearning/pulls)
 
 
 
-# Beginning Jenkins
-Beginning Jenkins teaches you everything you need to know about installing, setting up, configuring, and integrating a Jenkins server with your project to speed up the product development life cycle. You will learn how to deploy via Docker and integrate with Git. Next you will move on to understanding bespoke plugins and services to further customize your workflow, and dynamically adjust your build requirements when pushing to production.
-Once you have grasped the basics, you will explore user and plugin management along with updating and upgrading Jenkins. You will set up freestyle projects and views to manage your projects, followed by configuring parameters for your projects and creating upstream and downstream projects with views to visualize the projects. In addition to this, you will create a secure connection from your master to your build slaves and configure your build tasks to run on the slave.
-By the end of this course, you will be able to successfully set up a Jenkins server that checks your source code repositories for changes, triggering new builds and unit tests while informing all of the key stakeholders in your organization.
+# Introduction to Blockchain and Ethereum eLearning
+Blockchain applications provide a single-shared ledger to eliminate trust issues involving multiple stakeholders.
+With the help of Introduction to Blockchain and Ethereum, you'll learn how to create distributed Blockchain applications which do not depend on a central server or datacenter. The course begins by explaining Bitcoin, Altcoins, and Ethereum, followed by taking you through distributed programming using the Solidity language on the Ethereum Blockchain.
+
+By the end of this course, you'll be able to write, compile, and deploy your own smart contracts to the Ethereum Blockchain.
+
 
 
 ## What you will learn
-* Set up and deploy a Jenkins server across different platforms via Docker
-* Design development workflows that enable continuous integration and then easily integrate with Jenkins
-* Explore community plugins and use them to extend core Jenkins functionality
-* Set up a freestyle project as well as a view to manage your projects
-* Understand source control and pipelines, and build parameters in the context of Git and Jenkins
-* Configure general-purpose freestyle projects, or use more formal pipeline-driven implementations
+* Grasp Blockchain concepts such as private and public keys, addresses, wallets, and hashes
+* Send and analyze transactions in the Ethereum Rinkeby test network
+* Compile and deploy your own ERC20-compliant smart contracts and tokens
+* Test your smart contracts using MyEtherWallet
+* Create a distributed web interface for your contract
+* Combine Solidity and JavaScript to create your very own decentralized application
+
 
 
 ### Hardware requirements
 For an optimal student experience, we recommend the following hardware configuration:
-* **Processor**: 2.6 GHz or higher, preferably multi-core
-* **Memory**: 4GB RAM
-* **Hard disk**: 35GB or more
+* **Processor**: Intel Core i3 processor or equivalent
+* **Memory**: 2 GB RAM (1.5 GB if running on a virtual machine)
+* **Hard disk**: 10 GB available hard disk space
+* 5400 RPM hard disk drive
+* DirectX 9-capable video card (1024 x 768 or higher resolution)
 * An Internet connection
 
 
 
 ### Software requirements
 You’ll also need the following software installed in advance:
-* Operating System: Windows (8 or higher).
+* Operating System: Windows 8 or higher(64-bit version)
 * Browser: Google Chrome or Mozilla Firefox (latest updates installed)
-* Docker
-* Git
-* Python
-* Blue Ocean
+* Mist (https://github.com/ethereum/mist/releases/)
+* Truffle (http://truffleframework.com/)
+Access to installation instructions can be provided separately to course material for large training centers and organizations. All source code is publicly available on GitHub and fully referenced within the training material.
+
 
 
 
