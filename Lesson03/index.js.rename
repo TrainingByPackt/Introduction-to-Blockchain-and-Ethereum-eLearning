@@ -1,0 +1,38 @@
+// ["0xA3bAC1E8F756e51D79632AF1f6f3a8Af6e7e56A1","0xa59F7c9eb41B0D74f80741Fb255d86Fb3767e43C"], 100, 100
+
+web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"));
+abi = JSON.parse('[{"constant":true,"inputs":[],"name":"PriceToVote","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"Candidate","type":"address"}],"name":"voteForCandidate","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"Candidates","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"Candidate","type":"address"}],"name":"addCandidate","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"Candidate","type":"address"}],"name":"VotesForCandidate","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"numberOfCandidates","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"Candidate","type":"address"}],"name":"CandidateExists","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"votes","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"Voter","type":"address"}],"name":"HasVoted","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"PriceToAdd","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[{"name":"FirstCandidates","type":"address[]"},{"name":"priceToVote","type":"uint256"},{"name":"priceToAdd","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]')
+VotingContract = web3.eth.contract(abi);
+contractInstance = VotingContract.at('0x017c8cd4488e8531ed77ea002c982a5d6c26168c');
+candidates = {};
+
+document.addEventListener("DOMContentLoaded", function (_event) {
+  // Retrieve candidates
+  contractInstance.numberOfCandidates.call(function(_err,ok){ // Retrieve number of candidates
+    numberC = parseInt(ok);
+    for (var i=0; i<numberC; i++) {
+      (function(i){
+        contractInstance.Candidates.call(i,function(err,address){  // Retrieve address of each candidate
+          contractInstance.VotesForCandidate.call(address,function(err,votes) { // Retrieve votes of candidate
+            (function(i,address,votes){
+              $("#tablebody").append("<tr><td id='Name" + i + "'>" + address.toString() + "</td><td id='Votes" + i + "'>" + votes.toString() + "</td></tr>");
+              })(i,address,votes);
+            });
+          candidates[address.toString()] = i;
+        });
+      })(i);
+    }
+  });
+});
+
+function addCandidate() {
+  address = $("#addCandidate").val();
+  contractInstance.addCandidate(address);
+  location.reload()
+}
+
+function voteForCandidate() {
+  address = $("#candidate").val();
+  contractInstance.voteForCandidate(address);
+  location.reload()
+}

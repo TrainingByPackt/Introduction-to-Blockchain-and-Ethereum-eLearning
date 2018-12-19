@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First DApp</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+</head>
+<body class="container">
+  <h1>My Voting Contract</h1>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Address</th>
+          <th>Votes</th>
+        </tr>
+      </thead>
+      <tbody id="tablebody">
+
+      </tbody>
+    </table>
+  </div>
+  <input type="text" id="candidate" />
+  <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
+  <br><br>
+  <input type="text" id="addCandidate" />
+  <a href="#" onclick="addCandidate()" class="btn btn-primary">Add Candidate</a>
+  <br>
+</body>
+<script src="./index.js"></script>
+</html>
